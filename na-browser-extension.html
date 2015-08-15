@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="na-common.css" rel="stylesheet" type="text/css">
+    <link href="na-browser-extension.css" rel="stylesheet" type="text/css">
+    <script data-main="scripts/browser-bar-main" src="scripts/require.js"></script>
+    <!-- // <script src="na-host.js"></script> -->
+    <!-- // <script src="na-common.js"></script> -->
+    <!-- // <script src="na-browser-extension.js"></script> -->
+  </head>
+  <body>
+    <div id="na-main-window">
+      <div id="na-logged-out" class="na-browser-container">
+        <button id="na-login-screen-button">sign in</button>
+        <button id="na-register-screen-button">register</button>
+      </div>
+
+      <div id="na-register-div" class="na-browser-container">
+        <form id="na-register-form">
+          <input name="name" type="text" placeholder="ya name">
+          <input name="email" type="email" placeholder="ya email">
+          <input name="password" type="password" placeholder="secret code">
+          <button type="submit" id="na-register-button">sign up</button>
+        </form>
+      </div>
+
+      <div id="na-forgot-password-div" class="na-browser-container">
+        <form id="na-forgot-password-form">
+          <input name="email" type="email" placeholder="ya email">
+          <button type="submit">reset my password</button>
+        </form>
+      </div>
+
+      <div id="na-login-div" class="na-browser-container">
+        <form id="na-login-form">
+          <input name="email" type="email" placeholder="ya email">
+          <input name="password" type="password" placeholder="secret code">
+          <button type="submit" id="na-login-button">sign in</button>
+          <button class="na-div-link" href="na-forgot-password-div">forgot password</button>
+        </form>
+      </div>
+
+      <div id="na-notifications-tab" class="na-browser-container">
+      </div>
+
+      <div id="na-conversations-tab" class="na-browser-container">
+      </div>
+
+      <div id="na-friends-tab" class="na-browser-container">
+        <p>search by name to add friends</p>
+        <form id="na-friends-search-form">
+          <input type="text" name="name" placeholder="Michael Jordan">
+          <button type="submit">search</button>
+        </form>
+        <div id="na-friends-search-results-container">
+          <h3>search results</h3>
+          <div id="na-friends-search-results">
+          </div>
+        </div>
+        <h3>following</h3>
+        <div id="na-following-list">
+        </div>
+        <div id="na-follower-requests-list-container">
+          <h3>these people want to follow you</h3>
+          <div id="na-follower-requests-list">
+          </div>
+        </div>
+      </div>
+
+      <div id="na-account-tab" class="na-browser-container">
+        <p>logged in as <span id="na-account-tab-user-span" class="na-user-name"></span></p>
+        <h3>settings</h3>
+        <form id="na-account-settings-form">
+          <!-- <input name="commentsPublicByDefault" type="checkbox">
+          <label for="commentsPublicByDefault">mark all comments public by default</label> -->
+          <div>
+            <input name="approveFollowRequests" type="checkbox">
+            <label for="approveFollowRequests">require new follower requests to be approved by you?</label>
+          </div>
+          <h4>receive email notifications for:</h4>
+          <div>
+            <input name="receiveFollowerNotifications" type="checkbox">
+            <label for="receiveFollowerNotifications">new followers or follower requests</label>
+          </div>
+          <div>
+            <input name="receiveReplyNotifications" type="checkbox">
+            <label for="receiveReplyNotifications">replies on conversations you started or replied to</label>
+          </div>
+          <div>
+            <input name="receiveActivityNotifications" type="checkbox">
+            <label for="receiveActivityNotifications">new comments from users you follow</label>
+          </div>
+        </form>
+        <button id="na-logout-button">log out</button>
+      </div>
+
+      <div id="na-conversation-div" class="na-browser-container">
+        <button id="na-conversation-link" class="na-watch-video-button">go to clip</button>
+        <h2 id="na-conversation-video"></h2>
+        <h3 id="na-conversation-time"></h3>
+        <div id="na-spoiler-patrol">
+          <marquee>BEWARE SPOILERS</marquee>
+          <button class="na-watch-video-button na-watch-video-from-start">watch show/movie</button>
+          <button id="na-see-comment-button">see comment</button>
+        </div>
+      </div>
+
+      <div id="na-comments-for-video-div" class="na-browser-container na-spoiler-mode">
+        <h2 id="na-video-name"></h2>
+        <button class="na-watch-video-button na-watch-video-from-start">watch show/movie</button>
+        <div id="na-comment-list-spoiler-patrol">
+          <marquee>BEWARE SPOILERS</marquee>
+          <button id="na-reveal-comments-button">show comments</button>
+        </div>
+        <div id="na-comments-for-video-list">
+        </div>
+      </div>
+
+    </div>
+    <div id="na-menu-div" class="na-browser-container">
+      <ul id="na-menu-item-list">
+        <li class="na-menu-item na-div-link bg-dark-gray-hover" href="na-conversations-tab">convos</li>
+        <li class="na-menu-item na-div-link bg-dark-gray-hover" href="na-notifications-tab">stream</li>
+        <li class="na-menu-item na-div-link bg-dark-gray-hover" href="na-friends-tab">friends</li>
+        <li class="na-menu-item na-div-link bg-dark-gray-hover" href="na-account-tab">account</li>
+      </ul>
+    </div>
+  </body>
+</html>
+

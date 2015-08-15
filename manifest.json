@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+
+  "name": "Netfriends",
+  "description": "make your opinions known",
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": ["http://netflix.com/*", "http://www.netflix.com/*"],
+      "css": ["na-common.css"],
+      "js": ["na-host.js", "na-common.js", "na-overlay.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "bluebanana.png",
+    "default_popup": "na-browser-extension.html"
+  },
+  "background": {
+    "scripts": ["na-host.js", "na-common.js", "notification-poller.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "activeTab",
+    "alarms",
+    "cookies",
+    "storage",
+    "unlimitedStorage",
+    "http://netflix-annotator.herokuapp.com/",
+    "http://localhost/"
+  ],
+  "web_accessible_resources": ["na-behind-enemy-lines.js"]
+}
